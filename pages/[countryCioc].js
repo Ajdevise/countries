@@ -31,13 +31,15 @@ export default function Country({ countryData }) {
           Back
         </button>
         <div className="grid grid-cols-1 md:grid-cols-2 pt-16 gap-12">
-          <Image
-            src={countryData.flag}
-            width={600}
-            height={400}
-            objectFit="contain"
-            layout="responsive"
-          />
+          {countryData.flag && (
+            <Image
+              src={countryData.flag}
+              width={600}
+              height={400}
+              objectFit="contain"
+              layout="responsive"
+            />
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 auto-rows-min">
             <h1 className="font-bold text-2xl md:col-span-2">
               {countryData.name}
